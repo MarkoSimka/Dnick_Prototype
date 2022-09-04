@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.news,
+.loader {
+  height: 90vh;
+  width: 100%;
+}
+
+h2, p {
+  margin: 10px 10px;
+}
+
+.news {
+  text-align: left;
+}
+
+.loader {
+  font-size: 60px;
+}
+
+.color-green {
+  color: lightgreen;
+}
+
+.color-red {
+  color: red;
+}
