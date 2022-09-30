@@ -8,8 +8,6 @@ import Products from "./components/pages/Covid-Test";
 import Calendar from "./components/Calendar";
 import Novosti2 from "./components/Novosti2";
 import Login from "./components/Login";
-import { useEffect } from "react";
-import { useHistory } from "react-router-dom";
 
 function App() {
   return (
