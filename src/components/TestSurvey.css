@@ -230,3 +230,9 @@ h1 {
   font-size: 18px;
   letter-spacing: 1px;
 }
+
+.fa-left {
+  margin-left: 0.5rem;
+  font-size: 2rem;
+  color: #111111;
+}

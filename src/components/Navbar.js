@@ -59,6 +59,15 @@ function Navbar() {
                 Календар
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                to="/login"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Прекини сесија
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

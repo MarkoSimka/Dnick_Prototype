@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./TestSurvey.css";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function TestSurvey() {
   const [answered, setAnswered] = useState(false);
@@ -16,13 +17,27 @@ export default function TestSurvey() {
     } else {
       localStorage.setItem("covid", false);
     }
-    navigate.push("/novosti");
+    navigate.push("/novosti-rezulat");
   };
 
   return (
     <>
       <div id="form" class="_form">
+        <Link to="/">
+          <i class="fa-solid fa-left" />
+        </Link>
         <form onSubmit={handleSubmit} name="checkCovid">
+          <fieldset>
+            <legend>GENDER</legend>
+            <label class="input-check">
+              <input type="radio" name="gender" value="m" />
+              <span>Male</span>
+            </label>
+            <label class="input-check">
+              <input type="radio" name="gender" value="f" />
+              <span>Female</span>
+            </label>
+          </fieldset>
           <fieldset>
             <legend>
               Дали во изминатите 2 недели сте имале зголемена телесна
@@ -138,22 +153,14 @@ export default function TestSurvey() {
             </label>
           </fieldset>
 
-          <fieldset>
-            <legend>GENDER</legend>
-            <label class="input-check">
-              <input type="radio" name="gender" value="m" />
-              <span>Male</span>
-            </label>
-            <label class="input-check">
-              <input type="radio" name="gender" value="f" />
-              <span>Female</span>
-            </label>
-          </fieldset>
-
           {answered === false && answered2 === false ? (
-            <button disabled type="submit" name="submit" value="Run the test" />
+            <button disabled type="submit" name="submit" value="Run the test">
+              Run the test
+            </button>
           ) : (
-            <button type="submit" name="submit" value="Run the test" />
+            <button type="submit" name="submit" value="Run the test">
+              Run the test
+            </button>
           )}
         </form>
       </div>

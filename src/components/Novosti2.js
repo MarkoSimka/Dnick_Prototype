@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Novosti.css";
 
 export default function Novosti() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const hasCovid = localStorage.getItem("covid");
+
+  useEffect(() => {
+    setTimeout((e) => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
   return (
     <>
       <div className="container">
@@ -88,6 +98,20 @@ export default function Novosti() {
             </ul>
           </div>
         </div>
+
+        {isLoading === true ? (
+          <div className="loader container">
+            <i className="fas fa-solid fa-spinner fa-spin"></i>
+          </div>
+        ) : (
+          <div className="loader container">
+            {hasCovid === "true" ? (
+              <p className="color-red">Позитивен сте</p>
+            ) : (
+              <p className="color-green">Негативен сте</p>
+            )}
+          </div>
+        )}
       </div>
     </>
   );
