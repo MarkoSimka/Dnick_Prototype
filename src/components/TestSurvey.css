@@ -231,8 +231,6 @@ h1 {
   letter-spacing: 1px;
 }
 
-.fa-left {
-  margin-left: 0.5rem;
-  font-size: 2rem;
-  color: #111111;
+.linkBack {
+  text-decoration: none;
 }

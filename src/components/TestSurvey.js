@@ -24,7 +24,7 @@ export default function TestSurvey() {
     <>
       <div id="form" class="_form">
         <Link to="/">
-          <i class="fa-solid fa-left" />
+          <p className="linkBack">Назад</p>
         </Link>
         <form onSubmit={handleSubmit} name="checkCovid">
           <fieldset>
